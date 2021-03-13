@@ -1,0 +1,117 @@
+*
+{
+  padding:0; /*pas de marges intérieures*/
+  margin:0; /*pas de marges extérieures*/
+  font-family: Arial;
+  box-sizing: border-box;
+
+}
+
+p{
+    padding:0.5rem;
+}
+
+body{
+  margin-top:3.5rem;
+}
+
+img
+{
+  max-width: 100%;
+  max-height: 100%;
+  display:block;
+}
+
+.conteneur
+{
+  width:100%;
+  position: relative;
+}
+
+.overlay{
+  position: absolute;
+  bottom:0;
+  padding:20px;
+  color:white;
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  width:100%;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 1s ease-out;
+}
+
+.conteneur:hover .overlay{
+  opacity:1;
+  transition: opacity 1s ease-out;
+}
+
+.carte
+{
+  width:80%;
+  padding:2%;
+  margin:0 2% 2% 10%;
+  position:relative;
+  background: linear-gradient(to top right, #E4BA60, #F8DFAB);
+
+  border: 1px solid #E3C78C;
+  text-align: center;
+  -webkit-box-shadow: 0 1px 3px black;
+  -moz-box-shadow: 0 1px 3px black;
+  box-shadow: 0 1px 3px black;
+}
+
+.carte img{
+  border-radius: 50%;
+  width:60%;
+}
+
+h1,
+h2,
+h3,
+h4
+{
+  font-family: 'Ubuntu', Arial;
+  padding:0.5rem;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+[class*="col_"]{
+  margin:0;
+  padding:0;
+  background-color: white;
+  float:left;
+  width:100%;
+}
+
+
+@media only screen and (min-width: 768px) {
+  /* pour ordinateur: */
+.col_max {width: 100%;}
+.col_min {width: 30%;}
+.col_med {width: 70%;}
+.col_med2 {width: 80%;
+  max-height:calc(100vh - 5.5rem);
+  overflow: auto;
+  }
+
+/*le logo ne doit pas dépasser sur la première colonne*/
+  [class*="col_"]#first {
+    padding-top:1rem;
+  }
+}
+
+
+footer{
+  clear: both;
+  background-color: black;
+  color: white;
+  text-align: center;
+  height:2rem;
+  line-height:2rem;
+  font-family: 'Arsenal', Arial;
+}

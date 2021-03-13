@@ -1,0 +1,112 @@
+nav{
+ padding:0; /*pas de marges intérieures*/
+ margin:0; /*pas de marges extérieures*/
+ text-align: center;
+ position: fixed;
+ width: 100%;
+ top: 0px;
+ background-color: black;
+ height: 3.5rem;
+ -webkit-box-shadow: 0 1px 3px black;
+ -moz-box-shadow: 0 1px 3px black;
+ box-shadow: 0 1px 3px black;
+ z-index: 1; /*devant le reste*/
+ }
+
+
+nav a {
+  /*disposition : on les masque en mode mobile*/
+ display: none;
+ float: right;
+ text-align: center;
+ width:100px;
+ background-color:black;
+ text-decoration:none;
+ color:white;
+ height:3.5rem;
+ line-height: 3.5rem;
+ font-family: 'Ubuntu', Arial;
+ padding: 0 10px;
+ }
+
+ nav div#logo img{
+ 	/*redimensionnement de l'image*/
+ 	max-height: 4rem;
+ 	max-width: 4rem;
+  margin: 1rem;
+  float: left;
+  /*masqué en mode mobile*/
+  display: none;
+ }
+
+ nav a:hover{
+   color: #E7C77E;
+ }
+
+
+#mobile{
+  display:inline-block;
+  text-align: center;
+}
+
+#ordi{
+  display:none;
+}
+
+.icone{
+  width: 2rem;
+	height: 2rem;
+	padding: 0;
+	margin: 0.8rem 0.5rem;
+	/*positionnement de la case*/
+	display: flex;
+	justify-content: center;
+}
+
+/*Mettre les media queries après les instructions principales*/
+
+@media only screen and (max-width: 800px){
+nav.responsive {
+  height: 15rem;    /*taille proportionnelle à la taille de la police*/
+	max-height: 100vh;     /*100*1/100 du viewport soit tout le viewport*/
+  overflow: auto;
+  }
+  nav.responsive a:not(.quick-access) {
+    /*on centre les éléments sur chaque ligne*/
+  	display: block;
+    margin-left:auto;
+    margin-right: auto;
+
+	}
+
+  nav a{
+    width:100%;
+  }
+
+}
+
+@media only screen and (min-width: 800px) {
+	/*liens cliquables : on les affiche tous*/
+	nav a {
+		display: inline-block;
+
+	}
+	/*liens cliquables : on masque le bouton menu*/
+	#mobile {
+		display: none;
+	}
+
+  #ordi{
+    display: inline-block;
+  }
+
+  #accueil{
+    display: none;
+  }
+
+  nav div#logo img{
+    display: block;
+  }
+
+
+}
