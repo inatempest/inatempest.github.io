@@ -1,6 +1,6 @@
 /* Fixed sidenav, full height */
 .sidenav {
-  height: calc(100vh - 5.5rem);
+  height: 100%;
   width: 100%;
   background-color: #111;
   overflow-x: hidden;
@@ -56,5 +56,6 @@
   .sidenav{
     width:20%;
     float:left;
+    height: calc(100vh - 5.5rem);
   }
 }
