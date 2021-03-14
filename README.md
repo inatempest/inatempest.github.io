@@ -1,3 +1,3 @@
 # INATEMPEST website
 
-Disponible au lien suivant : inatempest.github.io
+Disponible au lien suivant : https://inatempest.github.io
